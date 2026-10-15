@@ -1,16 +1,15 @@
+
 import { prisma } from "./lib/prisma";
 
 async function main() {
-  // Bestehende Testdaten löschen
-  await prisma.contactMessage.deleteMany();
-
-  // Testnachricht erstellen
+  // Testnachricht erstellen, ohne vorhandene Nachrichten zu löschen
   const message = await prisma.contactMessage.create({
     data: {
       name: "Max Mustermann",
       email: "max@example.com",
       subject: "Interesse an deinem Portfolio",
-      message: "Hallo Aksaiya, ich habe dein Portfolio gesehen und wollte dir schreiben.",
+      message:
+        "Hallo Aksaiya, ich habe dein Portfolio gesehen und wollte dir schreiben.",
     },
   });
 
@@ -20,7 +19,7 @@ async function main() {
 main()
   .catch((error) => {
     console.error(error);
-    process.exit(1);
+    process.exitCode = 1;
   })
   .finally(async () => {
     await prisma.$disconnect();
