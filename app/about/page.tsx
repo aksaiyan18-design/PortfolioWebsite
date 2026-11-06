@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 
 export default function About() {
@@ -17,11 +18,7 @@ export default function About() {
 
             {/* Bild */}
             <div className="overflow-hidden rounded-3xl">
-              <img
-                src="/images/me.jpeg" 
-                alt="Aksaiya"
-                className="h-[500px] w-full object-cover"
-              />
+              <img src="/image/me.png" alt="Aksaiya" className="h-[500px] w-full object-cover" />
             </div>
 
             {/* Kleine Navigation */}
@@ -47,7 +44,7 @@ export default function About() {
               >
                 Skills
               </button>
-
+              
               <button
                 onClick={() => setActiveTab("certificates")}
                 className={`text-left text-lg font-medium transition-all duration-300 ${

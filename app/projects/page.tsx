@@ -3,37 +3,34 @@ import Navbar from "../components/Navbar";
 
 const projects = [
   {
-    title: "Mein erstes Projekt",
+    title: "Botanica",
     type: "Webentwicklung",
     year: "2026",
     description:
-      "Eine moderne Website, die ich im Rahmen meiner Ausbildung entwickelt habe. Dabei lag der Fokus auf einem übersichtlichen Design und einer benutzerfreundlichen Oberfläche.",
+      "Im Rahmen meines Studiums habe ich die Webseite Botanica entwickelt, ein Webprojekt rund um das Thema Tee. Im weiteren Verlauf des Projekts habe ich sowohl die funktionale Logik als auch das visuelle Design überarbeitet. Dabei lag mein Fokus darauf, die Struktur und den Aufbau der Webseite sinnvoll zu gestalten, die Nutzerführung zu verbessern und das Design an das Gesamtkonzept anzupassen. Die Produktbilder habe ich mithilfe von ChatGPT erstellt. Aktuell arbeite ich weiterhin am Aufbau und an der funktionalen Umsetzung der Webseite. Dazu gehören unter anderem die Ausarbeitung detaillierter Produktinformationen, die Implementierung eines Anmeldesystems sowie die Festlegung der Versandbedingungen. Durch dieses Projekt konnte ich sowohl meine technischen als auch meine gestalterischen Fähigkeiten weiterentwickeln.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/images/projects/project1.jpg",
-    github: "#",
-    demo: "#",
+    image: "/image/botanica-preview.png",
+    github: "https://github.com/aksaiyan18-design/Botanica"
   },
   {
-    title: "Mein zweites Projekt",
-    type: "Softwareentwicklung",
-    year: "2025",
-    description:
-      "Eine Softwareanwendung, bei der ich verschiedene Funktionen umgesetzt und mich mit der Strukturierung von Code beschäftigt habe.",
-    technologies: ["Python", "SQL"],
-    image: "/images/projects/project2.jpg",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Mein drittes Projekt",
+    title: "Korrupte Polizei – Bangkok bei Nacht",
     type: "Webentwicklung",
-    year: "2025",
+    year: "2026",
     description:
-      "Eine weitere Webanwendung mit einem modernen Aufbau. Hier konnte ich meine Kenntnisse in React und TypeScript vertiefen.",
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
-    image: "/images/projects/project3.jpg",
-    github: "#",
-    demo: "#",
+      "Inspiriert durch das Strategiespiel Devil’s Plan, bei dem logisches Denken und das Durchschauen anderer Spieler entscheidend sind, entstand die Idee für mein eigenes Spielprojekt. Die Umsetzung hatte ich bereits länger geplant und begann damit während der Semesterferien. Das Spiel entwickelte ich mit HTML, CSS und JavaScript. Mein Schwerpunkt lag auf der Spiellogik und den unterschiedlichen Rollen: Ein Dieb versucht, unentdeckt zu bleiben, während zwei Polizisten gemeinsam Hinweise sammeln und ihn aufspüren müssen. Der korrupte Polizist verfolgt eigene Interessen und verfügt über zusätzliche Informationen, beispielsweise über den letzten bekannten Aufenthaltsort des Diebes. Die Rollen unterscheiden sich auch in ihrer Sichtweise auf das Spielfeld: Der Dieb kann die Positionen aller Spieler erkennen, während die beiden regulären Polizisten und der korrupte Polizist die Polizeipositionen sehen. Durch Ermittlungen können Hinweise über die Aufenthaltsorte des Diebes in vergangenen Runden gesammelt werden. Verhaftungen müssen gezielt ausgelöst werden und sind nur erfolgreich, wenn sich der Dieb am selben Ort befindet. Die Gestaltung hielt ich bewusst schlicht, da mein Fokus auf der technischen Umsetzung, den Spielregeln und der strategischen Interaktion zwischen den Rollen lag.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "/image/korrupt-polizei-project-preview.png",
+    github: "https://github.com/aksaiyan18-design/Korrupte-Polizei-Bangkok-bei-Nacht"
+  },
+  {
+    title: "Inkly",
+    type: "Appentwicklung",
+    year: "2026",
+    description:
+      "Im Rahmen meines Studiums habe ich im vergangenen Semester an meinem Projekt Inkly gearbeitet. Dabei handelt es sich um eine Android-App, die das Konzept digitaler Brieffreundschaften aufgreift und die klassische Kommunikation per Brief in eine digitale Form überträgt. Nutzerinnen und Nutzer können persönliche Briefe an ihre Freunde verschicken und diese individuell gestalten. Dazu gehören beispielsweise das Hinzufügen von Bildern sowie die Auswahl verschiedener Schriftarten und Papierdesigns. Ein besonderes Element der App ist das Sammeln von Briefmarken: Für jeweils zehn versendete Briefe erhalten Nutzer eine Briefmarke, die sie ihrer Sammlung hinzufügen können. Ziel des Projekts war es, eine kreative und persönliche Möglichkeit zu schaffen, digitale Nachrichten auf eine besondere Weise zu gestalten und zu versenden.",
+    technologies: ["Java", "Supabase", "Gemini"],
+    image: "/image/inkly-preview.jpeg",
+    github: "https://github.com/aksaiyan18-design/Inkly"
   },
 ];
 
@@ -63,7 +60,6 @@ export default function Projects() {
 
           {/* Projektkarten */}
           <div className="grid gap-10 md:grid-cols-2">
-
             {projects.map((project) => (
               <article
                 key={project.title}
@@ -123,14 +119,6 @@ export default function Projects() {
 
                   {/* Buttons */}
                   <div className="mt-8 flex gap-4">
-
-                    <a
-                      href={project.demo}
-                      className="rounded-xl bg-[#7A1F35] px-5 py-3 font-medium text-white transition-all duration-300 hover:bg-[#3B2118]"
-                    >
-                      Projekt ansehen
-                    </a>
-
                     <a
                       href={project.github}
                       target="_blank"
@@ -139,13 +127,11 @@ export default function Projects() {
                     >
                       GitHub
                     </a>
-
                   </div>
 
                 </div>
               </article>
             ))}
-
           </div>
         </section>
       </main>

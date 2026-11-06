@@ -1,4 +1,3 @@
-
 "use client";
 
 import { FormEvent, useState } from "react";
@@ -55,7 +54,7 @@ export default function Contact() {
           <div className="grid w-full gap-16 md:grid-cols-2">
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-[#7A1F35]">
-                Kontakt
+                Contact
               </p>
 
               <h1 className="text-5xl font-bold tracking-tight text-[#3B2118] md:text-6xl">
